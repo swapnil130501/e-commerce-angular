@@ -7,7 +7,7 @@ export const PRODUCTS: Product[] = [
       description: 'This is the description for product 1.',
       price: 19.99,
       imageUrl: 'https://example.com/product1.jpg',
-      quantity: 0 // Initialize quantity to 0 for each product
+      quantity: 0 
     },
     {
       id: 2,
