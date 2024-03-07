@@ -25,12 +25,12 @@ export class CartComponent implements OnInit {
   }
 
   increaseQuantity(item: Product): void {
-    this.cartService.addToCart(item); // You may need to adjust this method according to your logic
+    item.quantity++;
     this.updateCartData();
   }
 
   decreaseQuantity(item: Product): void {
-    this.cartService.removeFromCart(item.id); // You may need to adjust this method according to your logic
+    this.cartService.removeFromCart(item.id); 
     this.updateCartData();
   }
 }

@@ -10,8 +10,13 @@ export class CartService {
   constructor() { }
 
   addToCart(product: Product) {
-    console.log(this.cartItems)
-    this.cartItems.push(product);
+    const existingItem = this.cartItems.find(item => item.id === product.id);
+    if (existingItem) {
+      existingItem.quantity++;
+    } else {
+      product.quantity = 1;
+      this.cartItems.push(product); 
+    }
   }
 
   removeFromCart(productId: number) {
@@ -31,15 +36,10 @@ export class CartService {
   }
 
   getTotalItems() {
-    return this.cartItems.length;
+    return this.cartItems.reduce((total, item) => total + item.quantity, 0);
   }
 
   getTotalPrice() {
-    if (this.cartItems && this.cartItems.length > 0) {
-      return this.cartItems.reduce((acc, product) => acc + product.price, 0);
-    } else {
-      return 0; 
-    }
-  }
-  
+    return this.cartItems.reduce((total, item) => total + (item.price * item.quantity), 0);
+  }  
 }
