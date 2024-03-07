@@ -37,6 +37,6 @@
       </div>
     </div>
     <p>Total Items: {{ totalItems }}</p>
-    <p>Total Price: ${{ totalPrice }}</p>
+    <p>Total Price: ₹{{ totalPrice | usdToInr | number:'1.2-2' }}</p>
   </div>
   

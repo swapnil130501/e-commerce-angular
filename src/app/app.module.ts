@@ -10,6 +10,7 @@ import { CartComponent } from './cart/cart.component';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ConversionPipe } from './custom.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PagenotfoundComponent,
     CartComponent,
     ProductItemComponent,
+    ConversionPipe
   ],
   imports: [
     BrowserModule,
