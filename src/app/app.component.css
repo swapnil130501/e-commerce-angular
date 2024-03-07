@@ -1,0 +1,36 @@
+/* Styles for the navigation bar */
+.navbar {
+    background-color: #333; /* Background color */
+    padding: 10px; /* Padding around the navigation items */
+  }
+  
+  /* Styles for the list of navigation items */
+  .nav-list {
+    list-style-type: none; /* Remove bullet points from the list */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox layout */
+  }
+  
+  /* Styles for each navigation item */
+  .nav-item {
+    margin-right: 20px; /* Add spacing between navigation items */
+  }
+  
+  /* Styles for navigation links */
+  .nav-item a {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    transition: color 0.3s; /* Smooth color transition on hover */
+  }
+  
+  /* Styles for active navigation link */
+  .nav-item a.active {
+    color: #ff9900; /* Change text color for active link */
+  }
+  
+  /* Hover effect for navigation links */
+  .nav-item a:hover {
+    color: #ff9900; /* Change text color on hover */
+  }
+  
