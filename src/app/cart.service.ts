@@ -30,6 +30,10 @@ export class CartService {
       }
     }
   }
+  
+  clearCart(): void {
+    this.cartItems = [];
+  }
 
   getCartItems() {
     return this.cartItems;

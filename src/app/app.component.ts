@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AuthService } from './auth.service';
+import { LoginService } from './login.service';
 
 @Component({
   selector: 'app-root',
@@ -9,9 +10,17 @@ import { AuthService } from './auth.service';
 export class AppComponent {
   title = 'e-commerce';
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private loginService: LoginService) {}
 
   flag(): boolean {
     return this.authService.flag;
+  }
+
+  flag2(): boolean {
+    return this.authService.isLoggedIn;
+  }
+
+  flag3(): boolean {
+    return this.authService.flag && this.authService.isLoggedIn;
   }
 }

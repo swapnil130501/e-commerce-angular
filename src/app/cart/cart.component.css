@@ -1,0 +1,16 @@
+.cart {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card {
+    width: 45%; /* Adjust width of the card */
+    margin-bottom: 20px;
+  }
+  
+  .card-img-top {
+    width: 100%; /* Set the image width to 100% */
+    height: auto; /* Auto adjust height to maintain aspect ratio */
+  }
+  

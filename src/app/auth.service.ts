@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { User } from './User';
+import { CartService } from './cart.service';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ import { User } from './User';
 export class AuthService {
   users: User[] = [];
 
-  constructor() { }
+  constructor(private cartService: CartService) { }
   isLoggedIn = false;
   flag = false;
 
@@ -28,6 +29,10 @@ export class AuthService {
     } else {
       return false;
     }
+  }
+  logout(): void {
+    this.isLoggedIn = false;
+    this.cartService.clearCart()
   }
 }
 
